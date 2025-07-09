@@ -1,0 +1,238 @@
+.cover-letter-container {
+  font-family: sans-serif;
+  background: linear-gradient(to right, #f5576c, #a16ae8);
+  color: #fefefe;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-letter-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+
+.cover-letter-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+
+.cover-letter-logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #fefefe;
+}
+
+.cover-letter-nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cover-letter-nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.cover-letter-login-btn {
+  background: orange;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cover-letter-hero-section {
+  text-align: center;
+      border-top: 1px solid rgba(31, 29, 29, 0.3); /* faint white line */
+
+  margin: 40px 0;
+}
+
+.cover-letter-hero-section h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.cover-letter-hero-buttons {
+  margin-top: 20px;
+}
+
+.cover-letter-find-btn,
+.cover-letter-become-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cover-letter-find-btn {
+  background: #27c2c2;
+  color: white;
+}
+
+.cover-letter-become-btn {
+  background: orange;
+  color: white;
+}
+
+.cover-letter-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+      border-top: 1px solid rgba(31, 29, 29, 0.3); /* faint white line */
+
+}
+
+.cover-letter-feature {
+  text-align: center;
+  margin: 20px;
+  
+}
+
+.cover-letter-feature-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.cover-letter-feature-box.teal {
+  background: #27c2c2;
+}
+
+.cover-letter-feature-box.yellow {
+  background: #f2c94c;
+}
+
+.cover-letter-feature-box.pink {
+  background: #f96d80;
+}
+
+.cover-letter-how-it-works {
+  text-align: center;
+      border-top: 1px solid rgba(31, 29, 29, 0.3); /* faint white line */
+  margin: 40px 0;
+}
+
+.cover-letter-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cover-letter-step {
+  text-align: center;
+  margin: 10px;
+}
+
+.cover-letter-step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.cover-letter-step-number.teal {
+  background: #27c2c2;
+}
+
+.cover-letter-step-number.yellow {
+  background: #f2c94c;
+}
+
+.cover-letter-step-number.pink {
+  background: #f96d80;
+}
+
+.cover-letter-arrow {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.cover-letter-testimonials {
+  text-align: center;
+  margin: 40px 0;
+    border-top: 1px solid rgba(31, 29, 29, 0.3); /* faint white line */
+
+}
+
+.cover-letter-testimonial-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.cover-letter-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(31, 29, 29, 0.3); /* faint white line */
+  margin-top: 20px; /* optional spacing above the line */
+}
+
+
+.cover-letter-footer-links {
+  margin-bottom: 10px;
+}
+
+.cover-letter-footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fefefe;
+}
+
+.cover-letter-footer-icons svg {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cover-letter-footer-icons svg:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cover-letter-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cover-letter-nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .cover-letter-steps {
+    flex-direction: column;
+  }
+
+  .cover-letter-arrow {
+    display: none;
+  }
+
+  .cover-letter-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
