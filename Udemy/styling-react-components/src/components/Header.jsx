@@ -2,7 +2,7 @@ import logo from '../assets/logo.png';
 //import classes from './Header.module.css';
 import { styled } from 'styled-components'
 
-const StyledHeader  = styled.header`
+/* const StyledHeader  = styled.header`
 
   display: flex;
   flex-direction: column;
@@ -50,14 +50,16 @@ const StyledHeader  = styled.header`
   }
 }
 
-`
+` */
 
 export default function Header() {
   return (
-    <StyledHeader>
-      <img src={logo} alt="A canvas" />
-      <h1 /* className={classes.paragraph} style={{color:'red'}} */>ReactArt</h1>
+    <header className='flex flex-col items-center mt-8 md:mb-16'>
+      <img src={logo} alt="A canvas"  className='mb-8 w-44 h-44 object-contain'/>
+      <h1 /* className={classes.paragraph} style={{color:'red'}} */ className='text-xl md:text-4xl font-semibold tracking-widest text-center uppercase text-amber-800  font-title' >ReactArt</h1>
       <p /* style={{ background: 'linear-gradient(to right,rgb(71, 35, 26), #feb47b)',color:'white'}} */>A community of artists and art-lovers.</p>
-    </StyledHeader>
+    
+
+    </header>
   );
 }
