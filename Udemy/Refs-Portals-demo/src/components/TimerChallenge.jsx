@@ -16,50 +16,36 @@ const TimerChallenge = ({ title, targetTime }) => {
     }
   }, [timeRemaining]);
 
-  function handleStart() {
-    if (timer.current) return; // Prevent duplicate timers
-    timer.current = setInterval(() => {
-      setTimeRemaining(prev => prev - 10);
-    }, 10);
-  }
+function handleStart() {
+   timer.current =   setTimeout(() => {
+        setTimerExpired(true)
+        dialog.current.open();
+    },targetTime * 1000 )
+    setTimerStarted(true)
+} 
 
-  function handleStop() {
-    clearInterval(timer.current);
-    timer.current = null;
-    dialog.current.open();
-  }
-
-  function handleReset() {
-    setTimeRemaining(targetTime * 1000);
-    clearInterval(timer.current);
-    timer.current = null;
-  }
+function handleStop(){
+  clearTimeout(timer.current)   
+}
 
   return (
     <>
-      <ResultModel
-        ref={dialog}
-        targetTime={targetTime}
-        remainingTime={timeRemaining}
-        onReset={handleReset}
-      />
-      <section className="challenge">
-        <h2>{title}</h2>
-        {!timerIsActive && timeRemaining !== targetTime * 1000 && <p>You lost!</p>}
-        <p className="challenge-time">
-          {targetTime} second{targetTime > 1 ? 's' : ''}
-        </p>
-        <p>
-          <button onClick={timerIsActive ? handleStop : handleStart}>
-            {timerIsActive ? 'Stop' : 'Start'} Challenge
-          </button>
-        </p>
-        <p className={timerIsActive ? 'active' : undefined}>
-          {timerIsActive ? 'Time is running...' : 'Time inactive'}
-        </p>
-      </section>
-    </>
-  );
-};
+          <ResultModel ref={dialog} targetTime={targetTime} result={'lost'}/>
+         <section className='challenge'>
+          <h2>{title}</h2>
+          {timerExpired && <p>You lost!</p>}
+          <p className='challenge-time'>
+             {targetTime} second{targetTime > 1 ? 's' : ''}
+          </p>
+          <p>
+               <button onClick={timerStarted ?  handleStop : handleStart}>{timerStarted ? 'Stop' : 'Start'} Challenge</button>
+          </p>
+          <p className={timerStarted ? 'active' : undefined}>
+                {timerStarted ? 'Time is running...' : 'Time inactive   '}
+          </p>
+         </section>
+         </>
+  )
+}
 
 export default TimerChallenge;
