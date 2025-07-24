@@ -50,7 +50,7 @@ app.use((req, res, next) => {
   res.status(404).json({ message: '404 - Not Found' });
 });
 
-app.listen(3000, () => {
-  console.log('✅ Server is running at http://localhost:3000');
-});
-
+app.listen(3000,() => {
+  console.log("local server started on http://localhost:3000")
+}
+);
