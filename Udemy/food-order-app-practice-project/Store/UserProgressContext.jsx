@@ -17,11 +17,12 @@ export const UserProgressContextProvider = ({children}) => {
      setUserProgress('')
    }
    function ShowCheckout(){
-       setUserProgress(checkout)
+       setUserProgress('checkout')
    }
    function hideCheckout(){
         setUserProgress('')
    }
+   console.log(userProgressSate)
    const userProgressCtx ={
     progress:userProgressSate,
     showCart,
